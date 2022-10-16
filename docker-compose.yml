@@ -1,0 +1,32 @@
+version: '3'
+services:
+    mariadb:
+        image: mariadb:10.6
+        environment:
+            - MARIADB_ROOT_PASSWORD=root
+            - MARIADB_DATABASE=opencart_db
+            - MARIADB_USER=opencart_user
+            - MARIADB_PASSWORD=secret
+        ports:
+            - 3306:3306
+        networks:
+            - local
+
+    opencart:
+        build:
+            context: ./src
+            dockerfile: Dockerfile
+        container_name: opencart
+        restart: unless-stopped
+        ports:
+            - 8080:80
+            - 4443:443
+        volumes:
+            - ./src:/var/www/html
+        networks:
+            - local
+
+networks:
+    local:
+        driver: bridge
+
