@@ -35,3 +35,8 @@ define('DB_PREFIX', 'ws_');
 
 // OpenCart API
 define('OPENCART_SERVER', 'https://www.opencart.com/');
+
+// CACHE
+define('CACHE_HOSTNAME', 'redis');
+define('CACHE_PORT', '6379');
+define('CACHE_PREFIX', 'redis_');

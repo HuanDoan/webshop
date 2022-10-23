@@ -31,7 +31,7 @@ $_['mail_verp']            = false;
 $_['mail_parameter']       = '';
 
 // Cache
-$_['cache_engine']         = 'file'; // apc, file, mem, memcached or redis
+$_['cache_engine']         = 'redis'; // apc, file, mem, memcached or redis
 $_['cache_expire']         = 3600;
 
 // Session

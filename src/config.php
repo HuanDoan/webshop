@@ -30,3 +30,8 @@ define('DB_PASSWORD', 'root');
 define('DB_DATABASE', 'opencart_db');
 define('DB_PORT', '3306');
 define('DB_PREFIX', 'ws_');
+
+// CACHE
+define('CACHE_HOSTNAME', 'redis');
+define('CACHE_PORT', '6379');
+define('CACHE_PREFIX', 'redis_');

@@ -29,6 +29,16 @@ services:
         networks:
             - local
 
+    redis:
+        image: redis:7.0-alpine
+        restart: always
+        ports:
+            - 6379:6379
+        volumes:
+            - ./cache:/data
+        networks:
+            - local
+
 networks:
     local:
         driver: bridge

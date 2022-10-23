@@ -38,6 +38,9 @@ RUN docker-php-ext-install \
 
 RUN docker-php-ext-enable mysqli
 
+# Installing php-redis
+RUN pecl install redis && docker-php-ext-enable redis
+
 # COPY php.ini "$PHP_INI_DIR/php.ini"
 
 # Enable rewrite mode of apache2
