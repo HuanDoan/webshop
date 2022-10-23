@@ -1,0 +1,5 @@
+storage/backup/*
+storage/cache/*
+storage/upload/*
+storage/logs/*
+storage/session/*
